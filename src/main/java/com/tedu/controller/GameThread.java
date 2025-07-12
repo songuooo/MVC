@@ -96,7 +96,7 @@ public class GameThread extends Thread {
             List<ElementObj> list = all.get(ge);
             for(int i=0; i<list.size(); i++){
                 ElementObj obj = list.get(i);
-                if(!obj.getLife()){// 死亡
+                if(!obj.isLife()){// 死亡
                     obj.die();
                     list.remove(i--);// list删除一个元素会将后面的元素往前移，回退i防止漏判定
                 }else{// 存活

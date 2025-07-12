@@ -14,11 +14,12 @@ public abstract class ElementObj {
     private int centerY;
     private int w;
     private int h;
-    private int sx;
-    private int sy;
-
     private ImageIcon icon;// ImageIcon相比Image可以读取图片参数
     private boolean life;// 存活状态
+    private int HP;
+
+    private int sx;
+    private int sy;
 
     public ElementObj() {
         this.life = true;
@@ -31,6 +32,11 @@ public abstract class ElementObj {
         this.h = h;
         this.icon = icon;
         this.life = true;
+    }
+
+    // 封装创建对象方法
+    public ElementObj createElement(String str){
+        return null;
     }
 
     /**
@@ -75,15 +81,13 @@ public abstract class ElementObj {
 
     }
 
-    // 封装创建对象方法
-    public ElementObj createElement(String str){// img,w,h,...
-        return null;
-    }
+
 
     public void die(){
 
     }
 
+    // Setter与Getter
     public int getX() {
         return x;
     }
@@ -96,23 +100,18 @@ public abstract class ElementObj {
     public void setY(int y) {
         this.y = y;
     }
-
     public int getCenterX() {
         return centerX;
     }
-
     public void setCenterX(int centerX) {
         this.centerX = centerX;
     }
-
     public int getCenterY() {
         return centerY;
     }
-
     public void setCenterY(int centerY) {
         this.centerY = centerY;
     }
-
     public int getW() {
         return w;
     }
@@ -137,13 +136,19 @@ public abstract class ElementObj {
     public void setSy(int sy) {
         this.sy = sy;
     }
+    public int getHP() {
+        return HP;
+    }
+    public void setHP(int HP) {
+        this.HP = HP;
+    }
     public ImageIcon getIcon() {
         return icon;
     }
     public void setIcon(ImageIcon icon) {
         this.icon = icon;
     }
-    public boolean getLife(){
+    public boolean isLife() {
         return life;
     }
     public void setLife(boolean life) {

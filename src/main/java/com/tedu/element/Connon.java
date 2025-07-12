@@ -58,8 +58,8 @@ public class Connon extends ElementObj {
         g2d.rotate(angle, this.getCenterX(), this.getCenterY());// 旋转坐标系
 
         g2d.drawImage(this.getIcon().getImage(),
-                this.getCenterX() - this.getW() / 2, this.getCenterY() - this.getH() / 2,
-                this.getCenterX() + this.getW() / 2, this.getCenterY() + this.getH() / 2,
+                this.getX(), this.getY(),
+                this.getX() + this.getW(), this.getY() + this.getH(),
                 this.getSx(), this.getSy(),
                 this.getSx()+this.getW(), this.getSy()+this.getH(),
                 null);
